@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Yu Hao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/theme/styles.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <!-- slicknav -->
+    <link href="https://cdn.bootcss.com/SlickNav/1.0.10/slicknav.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/SlickNav/1.0.10/jquery.slicknav.js"></script>
+
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script  type="text/javascript"
+      src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </script>
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <![endif]-->
+<script>
+	$(function(){
+		$('#menu').slicknav({'label':''});
+	});
+</script>
+<link rel="apple-touch-icon" sizes="180x180" href="/theme/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/theme/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/theme/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/theme/manifest.json">
+<link rel="mask-icon" href="/theme/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/theme/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="North Shore">
+<meta name="application-name" content="North Shore">
+<meta name="msapplication-config" content="/theme/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body>
+    <div id="wrapper">
+
+      <header>
+	<nav class="byline"><ul id="menu">
+            <li><a href="/"><i class="fa fa-user" aria-hidden="true"></i>HOME</a></li>
+            <li><a href="/pages/research.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Research</a></li>
+            <li><a href="/pages/code.html"><i class="fa fa-code-fork" aria-hidden="true"></i>Code</a></li>
+            <li><a href="/blog_index.html"><i class="fa fa-pencil" aria-hidden="true"></i>Posts</a></li>
+        </ul></nav><!-- /#menu -->
+        <div class="downloads">
+          <a href="http://weibo.com/whimsicalyuhao" class="fa fa-weibo"></a>
+          <a href="http://github.com/whimian" class="fa fa-github"></a>
+          <a href="https://www.linkedin.com/in/hao-yu-79ab2658" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-Another social link"></a>
+        </div>
+  <hgroup>
+    <h1>在Powershell中使用Conda的activate</h1>
+    <footer class="article-footer">
+      <address class="vcard author">
+        By         <a class="url fn" href="/author/yuhao.html">yuhao</a>
+      </address>
+      <abbr class="published" title="2017-10-23T09:00:00+08:00">
+         on 23.10.2017
+      </abbr>
+    </footer><!-- /.post-info -->
+  </hgroup>
+  
+
+
+
+  <!--  <html xmlns:wb="http://open.weibo.com/wb">
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+-->
+
+  <!-- /.share.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+      </header>
+<section id="content" class="body article">
+  <div class="entry-content">
+    <p><code>conda</code> 在 Windows 上的默认 <code>shell</code> 是 <code>cmd</code>， 而不是 <code>PowerShell</code>。 在 <code>PowerShell</code> 中使用一般的 <code>conda</code> 命令是可以 ， 但无法使用 <code>activate</code>、<code>deactivate</code> 切换环境 ， 这在日常使用中极其不便 ， 为了切换环境 ， 还要单独打开一个 cmd。</p>
+<p> 在 <a href="https://github.com/conda/conda/issues/626"><code>github</code></a> 上一直都在讨论这个问题 ， 而官方版本始终没有解决 。<a href="https://github.com/BCSharp">BCSharp</a> 给出了 <code>Powershell</code> 脚本 <a href="https://github.com/BCSharp/PSCondaEnvs">PSCondaEnvs</a> 解决了这一问题 。</p>
+<p> 可以直接使用 <code>conda</code> 通过他的 Anaconda Cloud 空间安装 。</p>
+<div class="highlight"><pre><span></span>conda install -n root -c pscondaenvs pscondaenvs
+</pre></div>
+<p> 可是 ， 在国内总是连接有问题 ， 因而只能采用手动安装 ， 把 <code>github</code> 的文件下载下来 ， 将 <code>activate.ps1</code>，<code>deactivate.ps1</code> 和 <code>invoke_cmdscript.ps1</code> 三个文件拷贝到 <code>Anaconda\Scripts</code> 下面 。</p>
+<p> 加入后通过 <code>PowerShell</code> 就能够正常使用 <code>activate</code> 和 <code>deactivate</code> 了 。</p>
+<p> 然而 ， 在使用 <code>cmder</code> 时出现另外一个问题 ， 即环境切换成功 ， 但无法在 Prompt 上显示当前环境名 ， 如下图 。</p>
+<p><img alt="Fail to set prompt" src="/images/fail_prompt.png" style="width: 833px; height: auto; max-width: 100%;"/></p>
+<p><a href="https://github.com/cmderdev/cmder/issues/1207#issuecomment-273478981">cmder 的 issues</a> 里有人提出了一种解决方法 ， 即将 <code>vendor\profile.ps1</code> 中最后一行 ， 将 prompt 设定为常量的代码注释掉 ， 这样便可以正常使用了 。</p>
+<p><img alt="Work Fine" src="/images/success_prompt.png" style="width: 613px; height: auto; max-width: 100%;"/></p>
+  </div><!-- /.entry-content -->
+  <div class="article-share-tags">
+    <div class="end-article-tags">
+    </div>
+    <div class='article-share'>
+      share -
+      <!--        <a target="_blank" href="http://twitter.com/share?text=在Powershell中使用Conda的activate&amp;url=/zai-powershellzhong-shi-yong-condade-activate.html"><i class='fa fa-twitter'></i></a>
+        <a target="_blank" href="http://facebook.com/sharer.php?t=在Powershell中使用Conda的activate&amp;u=/zai-powershellzhong-shi-yong-condade-activate.html"><i class='fa fa-facebook'></i></a>
+-->
+      <!--      <wb:share-button appkey=appproximate000001 addition="number" type="button"></wb:share-button>
+-->
+      <div class="social-share"></div>
+    </div>
+  </div>
+</section>
+<div class="neighbors">
+</div>
+      <footer>
+	  <a href="/pages/about.html" >About</a>
+	  <div class="right-footer">
+	  <a href="/categories.html" >Categories</a>
+	  <a href="/tags.html" >Tags</a>
+	  </div>
+      </footer>
+</body>
+</html>
