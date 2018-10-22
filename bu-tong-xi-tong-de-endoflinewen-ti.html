@@ -176,6 +176,7 @@ init_mathjax();
 <link rel="canonical" href="/bu-tong-xi-tong-de-endoflinewen-ti.html">
 
         <meta name="author" content="Yu Hao" />
+        <meta name="keywords" content="C++" />
         <meta name="description" content="最近由于要参加老师要求参加的中海油举办的 \(\pi-Frame\) 软件编程比赛 ， 准备复习一下 C++， 结果在使用 cin.getline() 接受输入时发现得到的 string 长度有问题 ， 导致比较的时候不能得到预期结果 。。。 经过一番纠结 ， 结果发现原来还是 end of line 问题 。 如果看过老式打印机就会知道 ， 打字的时候想要换行要进行两个操作 ， 一个是 LF（line feed）， 就是拧旋钮把纸张向上移动一行 ； 另一个是 CR（carriage return）， 就是板一下把手把打字的那个头移动到一行的最前面 。 在 ASCII 码中 ，LF 对应着 10， 而 CR 对应着 13， 一般用字符表示成 &#39;\n&#39; 和 &#39;\r&#39;。 Dex Char str 10 LF &#39;\n&#39; …" />
 
         <meta property="og:site_name" content="Yu Hao" />
@@ -184,7 +185,8 @@ init_mathjax();
         <meta property="og:url" content="/bu-tong-xi-tong-de-endoflinewen-ti.html"/>
         <meta property="og:description" content="最近由于要参加老师要求参加的中海油举办的 \(\pi-Frame\) 软件编程比赛 ， 准备复习一下 C++， 结果在使用 cin.getline() 接受输入时发现得到的 string 长度有问题 ， 导致比较的时候不能得到预期结果 。。。 经过一番纠结 ， 结果发现原来还是 end of line 问题 。 如果看过老式打印机就会知道 ， 打字的时候想要换行要进行两个操作 ， 一个是 LF（line feed）， 就是拧旋钮把纸张向上移动一行 ； 另一个是 CR（carriage return）， 就是板一下把手把打字的那个头移动到一行的最前面 。 在 ASCII 码中 ，LF 对应着 10， 而 CR 对应着 13， 一般用字符表示成 &#39;\n&#39; 和 &#39;\r&#39;。 Dex Char str 10 LF &#39;\n&#39; …"/>
         <meta property="article:published_time" content="2016-08-01" />
-            <meta property="article:section" content="Computer" />
+            <meta property="article:section" content="CS" />
+            <meta property="article:tag" content="C++" />
             <meta property="article:author" content="Yu Hao" />
 
 
@@ -276,6 +278,8 @@ Yu Hao            </a>
 
 
 
+<span class="label label-default">Tags</span>
+	<a href="/tag/c.html">C++</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -417,6 +421,8 @@ Yu Hao            </a>
 
         <div class="article-share-tags">
             <div class="end-article-tags">
+                <i class="fa fa-tag"></i>
+                <a href="/tag/c.html">C++</a>
             </div>
             <div class='article-share'>
                 share -
@@ -440,7 +446,7 @@ at China University of Geosciences
 
 <!-- Sidebar/Social -->
 <li class="list-group-item">
-  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+  <h4>Social</h4>
   <ul class="list-group" id="social">
     <li class="list-group-item"><a href="http://weibo.com/whimsicalyuhao"><i class="fa fa-weibo fa-lg"></i> weibo</a></li>
     <li class="list-group-item"><a href="http://github.com/whimian"><i class="fa fa-github-square fa-lg"></i> github</a></li>
@@ -448,6 +454,71 @@ at China University of Geosciences
   </ul>
 </li>
 <!-- End Sidebar/Social -->
+
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4>Recent Posts</h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="/distributions-with-scipystats.html">Distributions with scipy.stats</a></li>
+    <li class="list-group-item"><a href="/windows-10-an-zhuang-openssh.html">Windows 10 安装 OpenSSH</a></li>
+    <li class="list-group-item"><a href="/zai-powershellzhong-shi-yong-condade-activate.html">在Powershell中使用Conda的activate</a></li>
+    <li class="list-group-item"><a href="/condayu-pipvirtualenvde-huan-jing-guan-li-dui-bi.html">conda与pip+virtualenv的环境管理对比</a></li>
+    <li class="list-group-item"><a href="/bu-tong-xi-tong-de-endoflinewen-ti.html">不同系统的endOfLine问题</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4>Categories</h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="/category/cs.html">CS</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/category/python.html">python</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/category/statistics.html">Statistics</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+
+<!-- Sidebar/Tag Cloud -->
+<li class="list-group-item">
+  <a href="/"><h4>Tags</h4></a>
+  <ul class="list-group list-inline tagcloud" id="tags">
+    <li class="list-group-item tag-4">
+      <a href="/tag/c.html">C++</a>
+    </li>
+    <li class="list-group-item tag-2">
+      <a href="/tag/conda.html">conda</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="/tag/pip.html">pip</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="/tag/powershell.html">powershell</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="/tag/python.html">python</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="/tag/scipy.html">scipy</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="/tag/ssh.html">ssh</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="/tag/statistics.html">statistics</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="/tag/windows.html">windows</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Tag Cloud -->
   </ul>
 </section>
 <!-- End Sidebar -->            </aside>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Archives - Yu Hao</title>
+    <title>powershell - Yu Hao</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -174,7 +174,8 @@ init_mathjax();
 </script>
 
 
-        <meta name="author" content="Yu Hao" />
+    <meta name="author" content="Yu Hao" />
+    <meta name="keywords" content="powershell" />
 
     <!-- Open Graph tags -->
         <meta property="og:site_name" content="Yu Hao" />
@@ -246,33 +247,40 @@ Yu Hao            </a>
         <div class="col-sm-9">
     <ol class="breadcrumb">
         <li><a href="" title="Yu Hao"><i class="fa fa-home fa-lg"></i></a></li>
-        <li class="active">Archives</li>
+        <li><a href="/" title="Tags">Tags</a></li>
+        <li class="active">powershell</li>
     </ol>
-    <section id="content">
-      <h1>Archives for Yu Hao</h1>
-        <div id="archives">
-                <p>
-                    <span class="categories-timestamp"><time datetime="2018-10-13T16:20:00+08:00">Sat 13 October 2018</time></span>
-                    <a href="/distributions-with-scipystats.html">Distributions with scipy.stats</a>
-                </p>
-                <p>
-                    <span class="categories-timestamp"><time datetime="2017-11-23T09:00:00+08:00">Thu 23 November 2017</time></span>
-                    <a href="/windows-10-an-zhuang-openssh.html">Windows 10 安装 OpenSSH</a>
-                </p>
-                <p>
-                    <span class="categories-timestamp"><time datetime="2017-10-23T09:00:00+08:00">Mon 23 October 2017</time></span>
-                    <a href="/zai-powershellzhong-shi-yong-condade-activate.html">在Powershell中使用Conda的activate</a>
-                </p>
-                <p>
-                    <span class="categories-timestamp"><time datetime="2017-10-20T09:00:00+08:00">Fri 20 October 2017</time></span>
-                    <a href="/condayu-pipvirtualenvde-huan-jing-guan-li-dui-bi.html">conda与pip+virtualenv的环境管理对比</a>
-                </p>
-                <p>
-                    <span class="categories-timestamp"><time datetime="2016-08-01T16:20:00+08:00">Mon 01 August 2016</time></span>
-                    <a href="/bu-tong-xi-tong-de-endoflinewen-ti.html">不同系统的endOfLine问题</a>
-                </p>
-        </div>
-    </section>
+            <article>
+                <h2><a href="/zai-powershellzhong-shi-yong-condade-activate.html">在Powershell中使用Conda的activate</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-10-23T09:00:00+08:00"> Mon 23 October 2017</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">python</a>
+        /
+	<a href="/tag/conda.html">conda</a>
+        /
+	<a href="/tag/powershell.html">powershell</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p><code>conda</code> 在 Windows 上的默认 <code>shell</code> 是 <code>cmd</code>， 而不是 <code>PowerShell</code>。 在 <code>PowerShell</code> 中使用一般的 <code>conda</code> 命令是可以 ， 但无法使用 <code>activate</code>、<code>deactivate</code> 切换环境 ， 这在日常使用中极其不便 ， 为了切换环境 ， 还要单独打开一个 cmd。</p>
+<p> 在 <a href="https://github.com/conda/conda/issues/626"><code>github</code></a> 上一直都在讨论这个问题 ， 而官方版本始终没有解决 。<a href="https://github.com/BCSharp">BCSharp</a> 给出了 <code>Powershell</code> 脚本 <a href="https://github.com/BCSharp/PSCondaEnvs">PSCondaEnvs</a> 解决了这一问题 。</p>
+<p> 可以直接使用 <code>conda</code> 通过他的 Anaconda Cloud 空间安装 。</p>
+<p><code>conda install -n root -c pscondaenvs pscondaenvs</code></p>
+<p> 可是 ， 在国内总是连接有问题 ， 因而只能采用手动安装 ， 把 <code>github …</code></p>
+                    <a class="btn btn-default btn-xs" href="/zai-powershellzhong-shi-yong-condade-activate.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
@@ -301,11 +309,7 @@ at China University of Geosciences
 <li class="list-group-item">
   <h4>Recent Posts</h4>
   <ul class="list-group" id="recentposts">
-    <li class="list-group-item"><a href="/distributions-with-scipystats.html">Distributions with scipy.stats</a></li>
-    <li class="list-group-item"><a href="/windows-10-an-zhuang-openssh.html">Windows 10 安装 OpenSSH</a></li>
     <li class="list-group-item"><a href="/zai-powershellzhong-shi-yong-condade-activate.html">在Powershell中使用Conda的activate</a></li>
-    <li class="list-group-item"><a href="/condayu-pipvirtualenvde-huan-jing-guan-li-dui-bi.html">conda与pip+virtualenv的环境管理对比</a></li>
-    <li class="list-group-item"><a href="/bu-tong-xi-tong-de-endoflinewen-ti.html">不同系统的endOfLine问题</a></li>
   </ul>
 </li>
 <!-- End Sidebar/Recent Posts -->
@@ -373,7 +377,7 @@ at China University of Geosciences
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2018 Yu Hao
+         <div class="col-xs-10">&copy; 2017 Yu Hao
             &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
