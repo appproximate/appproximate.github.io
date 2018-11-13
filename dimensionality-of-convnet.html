@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>conda与pip+virtualenv的环境管理对比 - Yu Hao</title>
+    <title>Dimensionality of ConvNet - Yu Hao</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -173,22 +173,21 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-<link rel="canonical" href="/condayu-pipvirtualenvde-huan-jing-guan-li-dui-bi.html">
+<link rel="canonical" href="/dimensionality-of-convnet.html">
 
         <meta name="author" content="Yu Hao" />
-        <meta name="keywords" content="python,conda,pip" />
-        <meta name="description" content="最近发现 PyScaffold 可以辅助创建项目结构 ， 很想试一下 。 可是不知道为什么校园网突然不能够访问 清华大学开源软件镜像站 ， 这是国内目前唯一有 Anaconda 的源 ， 里面居然还有 conda-forge 的镜像 （ 为他们疯狂打 call）。 之前只用过 conda 来管理环境 ， 用 conda 非常简单方便 ，conda create 加上参数 -n 后面跟上环境的名字 ， 在后面加上创建后想安装的 packages。 conda create -n NewEnv pip 使用 conda， 环境默认都创建在 $home\Anaconda3\envs 下面 ， 方便管理 ， 当然有好多参数 ， 可以为所欲为 。 不能用 conda 了 ， 有很想试一下 PyScaffold， 怎么创建新环境呢 ， 那就试试传统的 virtualenv …" />
+        <meta name="keywords" content="DL,ML" />
+        <meta name="description" content="To novices in Deep Learning, figuring out the dimension of a convolutional network and the number of learnable parameters in it could be itimidating at first. This is largely due to the confusing usage of jargons (like depth, filter and fiber) and the parameters sharing scheme. This artile will focus …" />
 
         <meta property="og:site_name" content="Yu Hao" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="conda与pip+virtualenv的环境管理对比"/>
-        <meta property="og:url" content="/condayu-pipvirtualenvde-huan-jing-guan-li-dui-bi.html"/>
-        <meta property="og:description" content="最近发现 PyScaffold 可以辅助创建项目结构 ， 很想试一下 。 可是不知道为什么校园网突然不能够访问 清华大学开源软件镜像站 ， 这是国内目前唯一有 Anaconda 的源 ， 里面居然还有 conda-forge 的镜像 （ 为他们疯狂打 call）。 之前只用过 conda 来管理环境 ， 用 conda 非常简单方便 ，conda create 加上参数 -n 后面跟上环境的名字 ， 在后面加上创建后想安装的 packages。 conda create -n NewEnv pip 使用 conda， 环境默认都创建在 $home\Anaconda3\envs 下面 ， 方便管理 ， 当然有好多参数 ， 可以为所欲为 。 不能用 conda 了 ， 有很想试一下 PyScaffold， 怎么创建新环境呢 ， 那就试试传统的 virtualenv …"/>
-        <meta property="article:published_time" content="2017-10-20" />
-            <meta property="article:section" content="Python" />
-            <meta property="article:tag" content="python" />
-            <meta property="article:tag" content="conda" />
-            <meta property="article:tag" content="pip" />
+        <meta property="og:title" content="Dimensionality of ConvNet"/>
+        <meta property="og:url" content="/dimensionality-of-convnet.html"/>
+        <meta property="og:description" content="To novices in Deep Learning, figuring out the dimension of a convolutional network and the number of learnable parameters in it could be itimidating at first. This is largely due to the confusing usage of jargons (like depth, filter and fiber) and the parameters sharing scheme. This artile will focus …"/>
+        <meta property="article:published_time" content="2018-11-12" />
+            <meta property="article:section" content="python" />
+            <meta property="article:tag" content="DL" />
+            <meta property="article:tag" content="ML" />
             <meta property="article:author" content="Yu Hao" />
 
 
@@ -254,16 +253,16 @@ Yu Hao            </a>
         <div class="col-sm-9">
             <ol class="breadcrumb">
                 <li><a href="" title="Yu Hao"><i class="fa fa-home fa-lg"></i></a></li>
-                <li class="active">conda与pip+virtualenv的环境管理对比</li>
+                <li class="active">Dimensionality of ConvNet</li>
             </ol>
     <section id="content">
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="/condayu-pipvirtualenvde-huan-jing-guan-li-dui-bi.html"
+                    <a href="/dimensionality-of-convnet.html"
                        rel="bookmark"
-                       title="Permalink to conda与pip+virtualenv的环境管理对比">
-                        conda与pip+virtualenv的环境管理对比
+                       title="Permalink to Dimensionality of ConvNet">
+                        Dimensionality of ConvNet
                     </a>
                 </h1>
             </header>
@@ -273,7 +272,7 @@ Yu Hao            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-10-20T09:00:00+08:00"> Fri 20 October 2017</time>
+        <i class="fa fa-calendar"></i><time datetime="2018-11-12T20:00:00+08:00"> Mon 12 November 2018</time>
     </span>
 
 
@@ -281,127 +280,83 @@ Yu Hao            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="/tag/python.html">python</a>
+	<a href="/tag/dl.html">DL</a>
         /
-	<a href="/tag/conda.html">conda</a>
-        /
-	<a href="/tag/pip.html">pip</a>
+	<a href="/tag/ml.html">ML</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p> 最近发现 <a href="https://pyscaffold.readthedocs.io/en/v2.5.8/features.html">PyScaffold</a> 可以辅助创建项目结构 ， 很想试一下 。</p>
-<p> 可是不知道为什么校园网突然不能够访问 <a href="https://mirrors.tuna.tsinghua.edu.cn/"> 清华大学开源软件镜像站 </a>， 这是国内目前唯一有 <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/">Anaconda</a> 的源 ， 里面居然还有 <a href="https://conda-forge.org/">conda-forge</a> 的镜像 （ 为他们疯狂打 call）。</p>
-<p> 之前只用过 <code>conda</code> 来管理环境 ， 用 <code>conda</code> 非常简单方便 ，<code>conda create</code> 加上参数 <code>-n</code> 后面跟上环境的名字 ， 在后面加上创建后想安装的 packages。</p>
-<p><code>conda create -n NewEnv pip</code></p>
-<p> 使用 <code>conda</code>， 环境默认都创建在 <code>$home\Anaconda3\envs</code> 下面 ， 方便管理 ， 当然有好多参数 ， 可以为所欲为 。</p>
-<p> 不能用 <code>conda</code> 了 ， 有很想试一下 <code>PyScaffold</code>， 怎么创建新环境呢 ， 那就试试传统的 <code>virtualenv</code> 呗 。</p>
-<p><code>cd $ENV_BASE_DIR
-virtualenv $ENVIRONMENT_NAME</code></p>
-<p> 真是一个参数也没有啊 。</p>
-<p> 还是 <code>conda</code> 的 <a href="https://docs.anaconda.com/_downloads/conda-pip-virtualenv-translator.html"> 官方文档 </a> 里有一个对比表格 :</p>
-<table>
-<thead>
-<tr>
-<th align="center">Task</th>
-<th align="center">Conda package and environment manager command</th>
-<th align="center">Pip package manager command</th>
-<th align="center">Virtualenv environment manager command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Install a package</td>
-<td align="center">conda install $PACKAGE_NAME</td>
-<td align="center">pip install $PACKAGE_NAME</td>
-<td align="center">X</td>
-</tr>
-<tr>
-<td align="center">Update a package</td>
-<td align="center">conda update --name $ENVIRONMENT_NAME $PACKAGE_NAME</td>
-<td align="center">pip install --upgrade $PACKAGE_NAME</td>
-<td align="center">X</td>
-</tr>
-<tr>
-<td align="center">Update package manager</td>
-<td align="center">conda update conda</td>
-<td align="center">Linux/OSX: pip install -U pip Win: python -m pip install -U pip</td>
-<td align="center">X</td>
-</tr>
-<tr>
-<td align="center">Uninstall a package</td>
-<td align="center">conda remove --name $ENVIRONMENT_NAME $PACKAGE_NAME</td>
-<td align="center">pip uninstall $PACKAGE_NAME</td>
-<td align="center">X</td>
-</tr>
-<tr>
-<td align="center">Create an environment</td>
-<td align="center">conda create --name $ENVIRONMENT_NAME python</td>
-<td align="center">X</td>
-<td align="center">cd $ENV_BASE_DIR; virtualenv $ENVIRONMENT_NAME</td>
-</tr>
-<tr>
-<td align="center">Activate an environment</td>
-<td align="center">source activate $ENVIRONMENT_NAME</td>
-<td align="center">X</td>
-<td align="center">source $ENV_BASE_DIR/ $ENVIRONMENT_NAME/bin/activate</td>
-</tr>
-<tr>
-<td align="center">Deactivate an environment</td>
-<td align="center">source deactivate</td>
-<td align="center">X</td>
-<td align="center">deactivate</td>
-</tr>
-<tr>
-<td align="center">Search available packages</td>
-<td align="center">conda search $SEARCH_TERM</td>
-<td align="center">pip search $SEARCH_TERM</td>
-<td align="center">X</td>
-</tr>
-<tr>
-<td align="center">Install package from specific source</td>
-<td align="center">conda install --channel $URL $PACKAGE_NAME</td>
-<td align="center">pip install --index-url $URL $PACKAGE_NAME</td>
-<td align="center">X</td>
-</tr>
-<tr>
-<td align="center">List installed packages</td>
-<td align="center">conda list --name $ENVIRONMENT_NAME</td>
-<td align="center">pip list</td>
-<td align="center">X</td>
-</tr>
-<tr>
-<td align="center">Create requirements file</td>
-<td align="center">conda list --export</td>
-<td align="center">pip freeze</td>
-<td align="center">X</td>
-</tr>
-<tr>
-<td align="center">List all environments</td>
-<td align="center">conda info --envs</td>
-<td align="center">X</td>
-<td align="center">Install virtualenv wrapper, then lsvirtualenv</td>
-</tr>
-<tr>
-<td align="center">Install other package manager</td>
-<td align="center">conda install pip</td>
-<td align="center">pip install conda</td>
-<td align="center">X</td>
-</tr>
-<tr>
-<td align="center">Install Python</td>
-<td align="center">conda install python=x.x</td>
-<td align="center">X</td>
-<td align="center">X</td>
-</tr>
-<tr>
-<td align="center">Update Python</td>
-<td align="center">conda update python *</td>
-<td align="center">X</td>
-<td align="center">X</td>
-</tr>
-</tbody>
-</table>
-<p> 还是 <code>conda</code> 好 。。。</p>
+                <p>To novices in Deep Learning, figuring out the dimension of a convolutional network and the number of learnable parameters in it could be itimidating at first. This is largely due to the confusing usage of jargons (like depth, filter and fiber) and the parameters sharing scheme. This artile will focus on introduction of the  structure of a common ConvNet and clarify and compare a few of them that are used for describing the dimensionality of ConvNet.</p>
+<p>A basic ConvNet may be comprised of three layers: an INPUT Layer, a CONV Layer (with activation), POOL layer and a Fully-Connected layer. Since activation is required for every convolutional layer, it is not considered a seperate layer here. The input layer is often an image.</p>
+<h2>INPUT Layer</h2>
+<p>The dimension of input volume is determined by the size and channels of the image. For example, if we have an image with a resolution of 32<span class="math">\(\times\)</span>32 and 3 channels, then the input volume size should be 32<span class="math">\(\times\)</span>32<span class="math">\(\times\)</span>3.</p>
+<p><em>lowercase input layer in following part means "last layer"</em></p>
+<h2>CONV Layer</h2>
+<p>Neurons in CONV layer is arranged in 3 dimensions which could be discribed by length, width and depth. Each neuron connects to only a subset of neurons (local connectivity) taken from a 2-d square area called "receptive field" in input layer. The size of receptive field is defined by its side length <span class="math">\(F\)</span>. Since neurons in input layer is also 3-d, whether it is a CONV layer or an INPUT layer, <em>the number of weights for a single neuron</em> here is <span class="math">\(F\times F\times {d}_{-1}\)</span> in which  <span class="math">\({d}_{-1}\)</span> is the depth of input layer. <span class="math">\(F\)</span> is a hyperparameter which is non-learnable and should be set manually.</p>
+<p><img alt="Structure of ConvNet" src="http://cs231n.github.io/assets/cnn/cnn.jpeg"/></p>
+<p><img alt="Structure of Neurons" src="http://cs231n.github.io/assets/cnn/depthcol.jpeg"/></p>
+<p>The receptive field of neighboring neurons should cover slightly different areas, the difference is called Stride (<span class="math">\(S\)</span>). When iterating over neurons of a depth slice, the receptive field is moving across input layer (side length <span class="math">\(W\)</span>) with step of <span class="math">\(S\)</span>. So the number of neurons needed to cover input layer spatial size is <span class="math">\({((W-F)/S+1)}^2\)</span>, often denoted by <span class="math">\((W-F)/S+1\)</span> for brevity. In this way, the side length of CONV layer will be smaller than input layer. But it's usually preferable to use zero padding to retain spatial dimentionality. If the input layer is zero padded by an amount of <span class="math">\(P\)</span>, the size of a depth slice of neurons will be <span class="math">\((W−F+2P)/S+1\)</span>.</p>
+<p>At the core of a Convolution layer is the <strong>parameter sharing scheme</strong>, each neuron in the same depth slice share the same sets of weights. So the forward pass of the CONV layer can in each depth slice be computed as a convolution of the neuron’s weights with the input volume, hence the name convolutional neural network. The weights work like a filter over an image, so it is often referd as filter or kernel.</p>
+<p>The total <strong>number of neurons</strong> in a CONV layer is <span class="math">\({((W-F)/S+1)}^2*d\)</span>, where <span class="math">\(d\)</span> is the depth of neurons. And <span class="math">\(d\)</span> is a hyperparameter and is set to increase in consecutive CONV layers. Since neurons in the same depth slice share the same set of weights, number of weights to train for the all neurons in the layer is <span class="math">\(F\times F\times {d}_{-1} \times d\)</span>. The <strong>number of parameters</strong> to train is <span class="math">\(F\times F\times {d}_{-1} \times d + d\)</span>, acounting for the bias.</p>
+<h2>POOL layer</h2>
+<p>Pooling, often max pooling, is used to reduce the number of parameters. Pooling works also works like a filter, with side length of <span class="math">\(F\)</span> and stride of <span class="math">\(S\)</span>, the side length of neurons in POOL layer is <span class="math">\({((W-F)/S+1)}^2\)</span>. The depth <span class="math">\(d\)</span> is usually set to be equal to input layer. Total <strong>number of neurons</strong> in Poolin layer is <span class="math">\({((W-F)/S+1)}^2 \times d\)</span>. The <strong>number of parameters</strong> to train is <span class="math">\(F\times F\times {d}_{-1} \times d + d\)</span>, acounting for the bias.</p>
+<h2>Output Layer</h2>
+<p>The <strong>number of neurons</strong> is the same as its input layer (denoted as <span class="math">\(C\)</span>). The <strong>number of parameters</strong> will be <span class="math">\(C\times(C+1)\)</span>, since it is a fully-connected layer, which is a lot larger than contingent CONV layer.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
             </div>
 
@@ -442,9 +397,8 @@ virtualenv $ENVIRONMENT_NAME</code></p>
         <div class="article-share-tags">
             <div class="end-article-tags">
                 <i class="fa fa-tags"></i>
-                <a href="/tag/python.html">python</a>
-                <a href="/tag/conda.html">conda</a>
-                <a href="/tag/pip.html">pip</a>
+                <a href="/tag/dl.html">DL</a>
+                <a href="/tag/ml.html">ML</a>
             </div>
             <div class='article-share'>
                 share -
